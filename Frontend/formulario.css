@@ -1,0 +1,344 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: #eef2f7;
+  color: #0f172a;
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.contenedor {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.navbar {
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-contenido {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 58px;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #0f172a;
+  letter-spacing: -0.3px;
+}
+
+.logo strong {
+  color: #7d1b86;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.nav-links a {
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: #64748b;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: #7d1b86;
+}
+
+main.contenedor {
+  flex: 1;
+  display: grid;
+  grid-template-columns: minmax(280px, 360px) 1fr;
+  gap: 1.5rem;
+  align-items: start;
+  padding-bottom: 3rem;
+}
+
+.encabezado-principal {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 1.25rem 0 1rem;
+}
+
+.encabezado-principal h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #0f172a;
+}
+
+.encabezado-principal p {
+  color: #7d1b86;
+  font-size: 0.95rem;
+}
+
+/* El formulario ocupa la columna izquierda */
+.panel-tienda {
+  grid-column: 1;
+}
+
+/* La lista de mensajes ocupa la columna derecha */
+#productos {
+  grid-column: 2;
+}
+
+/* TARJETAS */
+.tarjeta {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 1.5rem 1.5rem 1.75rem;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+}
+
+.tarjeta h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #0f172a;
+  padding-bottom: 0.9rem;
+  margin-bottom: 1.1rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+/* FORMULARIO */
+.campo {
+  margin-bottom: 1rem;
+}
+
+.campo label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #7d1b86;
+  margin-bottom: 0.4rem;
+}
+
+.campo input,
+.campo textarea {
+  width: 100%;
+  padding: 0.75rem 0.85rem;
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: #0f172a;
+  background: #ffffff;
+  border: 1px solid #d9e0ea;
+  border-radius: 10px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.campo textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.campo input::placeholder,
+.campo textarea::placeholder {
+  color: #94a3b8;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+  outline: none;
+  border-color: #7d1b86;
+  box-shadow: 0 0 0 3px rgba(125, 27, 134, 0.18);
+}
+
+/* BOTONES  */
+.acciones-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 1.25rem;
+}
+
+.btn {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn:focus-visible {
+  outline: 3px solid rgba(125, 27, 134, 0.35);
+  outline-offset: 2px;
+}
+
+.btn-guardar {
+  background: #7d1b86;
+  color: #fff;
+}
+
+.btn-guardar:hover {
+  background: #5a1260;
+}
+
+.btn-cancelar {
+  background: #e2e8f0;
+  color: #475569;
+}
+
+.btn-cancelar:hover {
+  background: #cbd5e1;
+}
+
+.lista-Mensajes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.lista-Mensajes > div,
+.mensaje-item,
+.item-mensaje,
+.card-mensaje {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.lista-Mensajes h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.lista-Mensajes .correo,
+.lista-Mensajes .destacado {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.lista-Mensajes p {
+  font-size: 0.9rem;
+  color: #64748b;
+  overflow-wrap: anywhere;
+}
+
+.lista-Mensajes .fecha {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin-top: 0.25rem;
+}
+
+/* Botones de Editar / Eliminar dentro de cada mensaje */
+.acciones-item,
+.acciones-mensaje {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.6rem;
+}
+
+.acciones-item button,
+.acciones-mensaje button,
+.lista-Mensajes .btn-editar,
+.lista-Mensajes .btn-eliminar {
+  flex: 1;
+  width: auto;
+  padding: 0.5rem 0.75rem;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: filter 0.2s;
+}
+
+.btn-editar {
+  background: #e2e8f0;
+  color: #475569;
+}
+
+.btn-eliminar {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.btn-editar:hover,
+.btn-eliminar:hover {
+  filter: brightness(0.95);
+}
+
+.lista-Mensajes .vacio {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #64748b;
+  padding: 1.5rem 0;
+}
+
+/*  FOOTER */
+.footer {
+  background: #ffffff;
+  border-top: 1px solid #d9e0ea;
+  padding: 1.25rem 0;
+  margin-top: auto;
+}
+
+.footer-contenido {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+/* RESPONSIVE */
+@media (max-width: 860px) {
+  main.contenedor {
+    grid-template-columns: 1fr;
+  }
+
+  .panel-tienda,
+  #productos {
+    grid-column: 1;
+  }
+}
+
+@media (max-width: 560px) {
+  .lista-Mensajes {
+    grid-template-columns: 1fr;
+  }
+
+  .encabezado-principal h1 {
+    font-size: 1.6rem;
+  }
+
+  .nav-links {
+    gap: 0.9rem;
+  }
+}
