@@ -1,3 +1,4 @@
+require('dotev').config();
 const mysql = require('mysql2');
 // configuracion de la conexion a mysql
 const conexion = mysql.createConnection({
